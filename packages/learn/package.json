@@ -1,0 +1,15 @@
+{
+  "name": "learn",
+  "version": "0.0.1",
+  "description": "The server of the learn platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.8.1"
+  }
+}
