@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "koa": "^2.8.1"
+    "koa": "^2.8.1",
+    "@learn/utils": "0.0.1"
   }
 }

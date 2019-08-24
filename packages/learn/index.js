@@ -1,8 +1,4 @@
-const Koa = require("koa");
-const app = new Koa();
+const Learn = require("./Learn");
 
-app.use(async ctx => {
-  ctx.body = "Hello World";
-});
-
-app.listen(3000);
+// Start the server
+Learn.start();
