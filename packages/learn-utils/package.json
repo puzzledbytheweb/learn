@@ -1,0 +1,11 @@
+{
+  "name": "@learn/utils",
+  "version": "0.0.1",
+  "description": "Utilities for the learning platform Learn",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
