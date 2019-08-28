@@ -9,10 +9,14 @@ const METHOD_OBJECT = {
 };
 
 module.exports = (router, routes = []) => {
+  const newRouter = Object.assign({}, router);
+
   routes.forEach(route => {
     const { method, path, controller } = route;
 
-    // Call function for given method
-    METHOD_OBJECT[method](router, path, controller);
+    // Register routes for given method
+    METHOD_OBJECT[method](newRouter, path, controller);
   });
+
+  return newRouter;
 };

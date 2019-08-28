@@ -24,8 +24,9 @@ const TEST_ROUTES = [
   }
 ];
 
-// Generate Routes
-Learn.generateRoutes(TEST_ROUTES);
+console.log(Learn);
+
+Learn.bootstrap();
 
 // Start the server
 Learn.start();

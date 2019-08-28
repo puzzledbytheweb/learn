@@ -1,5 +1,7 @@
 const generator = require("./generator");
+const bootstrap = require("./bootstrap");
 
 module.exports = {
-  generator
+  generator,
+  bootstrap
 };

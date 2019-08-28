@@ -2,9 +2,8 @@ const http = require("http");
 const { EventEmitter } = require("events");
 const { logger } = require("@learn/utils");
 const Koa = require("koa");
-const Router = require("koa-router");
 
-const { generator } = require("./core/index");
+const { bootstrap } = require("./core/index");
 
 class Learn extends EventEmitter {
   constructor() {
@@ -15,6 +14,7 @@ class Learn extends EventEmitter {
     this.log = logger;
 
     this.config = {
+      name: "Learn Project",
       port: process.env.PORT || 3000
     };
   }
@@ -50,16 +50,12 @@ class Learn extends EventEmitter {
     return this.stop();
   }
 
-  generateRoutes(routes) {
-    const { generateRoutes } = generator;
+  registerPlugins(plugins) {
+    this.plugins = plugins;
+  }
 
-    const router = new Router();
-
-    // This function modifies the actual router
-    generateRoutes(router, routes);
-
-    // Register router in our app
-    this.app.use(router.routes()).use(router.allowedMethods());
+  bootstrap() {
+    bootstrap(this);
   }
 }
 
