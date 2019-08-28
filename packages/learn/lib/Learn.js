@@ -4,7 +4,7 @@ const { logger } = require("@learn/utils");
 const Koa = require("koa");
 const Router = require("koa-router");
 
-const { generator } = require("./lib/index");
+const { generator } = require("./core/index");
 
 class Learn extends EventEmitter {
   constructor() {
