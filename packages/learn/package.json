@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@learn/utils": "0.0.1",
     "koa": "^2.8.1",
-    "@learn/utils": "0.0.1"
+    "koa-router": "^7.4.0"
   }
 }
