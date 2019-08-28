@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "pino": "^5.13.2"
+    "pino": "^5.13.2",
+    "pino-pretty": "^3.2.1"
   }
 }

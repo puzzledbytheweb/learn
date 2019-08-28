@@ -1,0 +1,21 @@
+{
+  "name": "learning-platform",
+  "version": "0.0.1",
+  "description": "A modular platform to help schools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bootstrap": "lerna bootstrap --use-workspaces",
+    "start": "yarn --cwd packages/learn start"
+  },
+  "author": "",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "eslint": "^6.2.2",
+    "lerna": "^3.16.4"
+  }
+}

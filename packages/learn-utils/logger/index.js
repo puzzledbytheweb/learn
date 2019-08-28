@@ -31,22 +31,12 @@ function getBool(envVar, defaultValue) {
 const loggerConfig = {
   level: getLogLevel(),
   timestamp: getBool(process.env.LEARN_LOG_TIMESTAMP, false),
+  prettyPrint: getBool(process.env.LEARN_LOG_PRETTY_PRINT, true),
   forceColor: getBool(process.env.LEARN_LOG_FORCE_COLOR, true)
 };
 
-const pretty = pino.pretty({
-  formatter: (logs, options) => {
-    return `${options.asColoredText(
-      { level: 10 },
-      `[${new Date().toISOString()}]`
-    )} ${options.prefix.toLowerCase()} ${logs.stack ? logs.stack : logs.msg}`;
-  }
-});
+console.log(loggerConfig);
 
-pretty.pipe(process.stdout);
-
-const logger = getBool(process.env.LEARN_LOG_PRETTY_PRINT, true)
-  ? pino(loggerConfig, pretty)
-  : pino(loggerConfig);
+const logger = pino(loggerConfig);
 
 module.exports = logger;
